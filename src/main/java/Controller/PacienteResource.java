@@ -1,5 +1,15 @@
 package Controller;
-
+/*
+ * Autor: Génesis Escobar
+ * Fecha: 06-12-2025
+ * Versión: 1.0
+ * Descripción:
+ * Recurso REST que gestiona las operaciones CRUD de la entidad Paciente.
+ * Expone endpoints para listar, buscar, registrar, actualizar y cambiar
+ * el estado de los pacientes, delegando la lógica de negocio al servicio.
+ * Utiliza la conexión proporcionada por el filtro/servlet para interactuar
+ * con la base de datos.
+ */
 import Model.Paciente;
 import Service.PacienteService;
 import Service.PacienteServiceImpl;
@@ -13,12 +23,19 @@ import jakarta.ws.rs.core.Response;
 import java.sql.Connection;
 import java.util.List;
 
+/**
+ * Define la URL base para todos los endpoints relacionados con pacientes.
+ */
 @Path("/pacientes") //nombre de la url
 public class PacienteResource {
 
     @Context
-    HttpServletRequest request;
+    HttpServletRequest request; // Permite acceder a la conexión inyectada por el filtro
 
+    /**
+     * Endpoint GET para obtener la lista completa de pacientes.
+     * Retorna HTTP 200 junto con un arreglo JSON.
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response listar() {
@@ -39,6 +56,11 @@ public class PacienteResource {
             return Response.status(500).entity(e.getMessage()).build();
         }
     }
+
+    /**
+     * Endpoint GET que permite buscar un paciente por ID.
+     * Retorna 200 si existe, o 404 si no se encuentra.
+     */
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -58,6 +80,14 @@ public class PacienteResource {
         }
     }
 
+    /**
+     * Endpoint POST para registrar un nuevo paciente.
+     * El servicio valida la cédula y lanza HospitalException si hay error.
+     * Respuestas:
+     * - 200: creación correcta
+     * - 400: datos inválidos
+     * - 500: error interno
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -77,6 +107,13 @@ public class PacienteResource {
         }
     }
 
+    /**
+     * Endpoint PUT para actualizar un paciente existente.
+     * El ID de la URL tiene prioridad sobre el del cuerpo del JSON.
+     * Respuestas:
+     * - 200: actualización exitosa
+     * - 404: paciente no encontrado
+     */
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -102,6 +139,11 @@ public class PacienteResource {
         }catch (Exception e){
             return Response.status(500).entity(e.getMessage()).build();        }
     }
+
+    /**
+     * Endpoint PUT para activar o desactivar un paciente.
+     * El estado se recibe mediante un parámetro de consulta (?activo=true/false).
+     */
     @PUT
     @Path("/{id}/estado")
     @Produces(MediaType.APPLICATION_JSON)

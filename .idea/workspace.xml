@@ -9,32 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Hospital_back.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Config/JakartaRestConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PacienteResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Filter/ConexionFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Filter/CorsFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Paciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/PacienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/PacienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/PacienteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/ServiceJdbcException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Util/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Util/HospitalException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Util/ValidadorCedula.java" afterDir="false" />
+    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Division del proyecto por capas y comentarios">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PacienteResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PacienteResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +27,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GenesisEsc"
+  }
+}]]></component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="b497f946-a8bc-436d-9105-90a98910c2c2" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GenesisEsc/Hospital_back.git",
+    "accountId": "b497f946-a8bc-436d-9105-90a98910c2c2"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
@@ -200,12 +191,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761172419787</updated>
-      <workItem from="1765040396043" duration="10939000" />
+      <workItem from="1765040396043" duration="11248000" />
     </task>
+    <task id="LOCAL-00001" summary="Division del proyecto por capas y comentarios">
+      <option name="closed" value="true" />
+      <created>1765066740436</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765066740436</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Division del proyecto por capas y comentarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Division del proyecto por capas y comentarios" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

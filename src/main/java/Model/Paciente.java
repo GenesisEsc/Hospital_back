@@ -1,10 +1,20 @@
 package Model;
-
+/*
+ * Autor: Génesis Escobar
+ * Fecha: 05-12-2025
+ * Versión: 1.0
+ * Descripción:
+ * Entidad que representa a un Paciente dentro del sistema hospitalario.
+ * Contiene los datos personales y el estado del paciente. Implementa
+ * Serializable para permitir su conversión entre objetos y flujos de datos,
+ * especialmente útil en entornos Jakarta EE y en procesos de transporte
+ * (JSON, sesiones, etc.).
+ */
 import java.io.Serializable;
 
 public class Paciente implements Serializable {
 
-    //atributos privados (encapsulamiento)
+    // Atributos privados: garantizan encapsulamiento y control de acceso
     private int id;
     private String nombre;
     private String cedula;
@@ -13,13 +23,19 @@ public class Paciente implements Serializable {
     private String direccion;
     private boolean activo;
 
-    //1. Constructor Vacio (OBLIGATORIO)
-    // Jakarta EE necesita esto para poder convertir el JSON a Objeto y viceversa.
+    /**
+     * Constructor vacío.
+     * Obligatorio para que Jakarta EE pueda instanciar la clase automáticamente
+     * al convertir JSON a Objetoy viceversa (deserialización/serialización).
+     */
     public Paciente() {
 
     }
 
-    //2. Constructor con parametros, ayuda a crear objetod rápido
+    /**
+     * Constructor completo.
+     * Facilita la creación rápida de objetos cuando ya se tienen todos los datos.
+     */
     public Paciente(int id, String nombre, String cedula, String correo, int edad, String direccion, boolean activo) {
         this.id = id;
         this.nombre = nombre;
@@ -30,7 +46,7 @@ public class Paciente implements Serializable {
         this.activo = activo;
     }
 
-    //Getters y Setters
+    // Getters y Setters: permiten leer y modificar los atributos de forma controlada.
 
     public int getId() {
         return id;

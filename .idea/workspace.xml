@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Comentarios en PacienteResource">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Filter/ConexionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Filter/ConexionFilter.java" afterDir="false" />
+    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Comentarios en CorsFilter">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Paciente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761172419787</updated>
-      <workItem from="1765040396043" duration="11580000" />
+      <workItem from="1765040396043" duration="11895000" />
     </task>
     <task id="LOCAL-00001" summary="Division del proyecto por capas y comentarios">
       <option name="closed" value="true" />
@@ -209,7 +209,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765067120420</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Comentarios en ConexionFilter">
+      <option name="closed" value="true" />
+      <created>1765067353061</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765067353061</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Comentarios en CorsFilter">
+      <option name="closed" value="true" />
+      <created>1765067551772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765067551772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +234,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Division del proyecto por capas y comentarios" />
     <MESSAGE value="Comentarios en PacienteResource" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en PacienteResource" />
+    <MESSAGE value="Comentarios en ConexionFilter" />
+    <MESSAGE value="Comentarios en CorsFilter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en CorsFilter" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

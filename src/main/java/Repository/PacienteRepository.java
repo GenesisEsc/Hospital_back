@@ -1,5 +1,14 @@
 package Repository;
-
+/*
+ * Autor: Génesis Escobar
+ * Fecha: 06-12-2025
+ * Versión: 1.0
+ * Descripción:
+ * Repositorio encargado de gestionar el acceso a datos de la entidad Paciente.
+ * Implementa operaciones CRUD utilizando JDBC y recibe la conexión desde
+ * el filtro de conexión. Centraliza toda la interacción con la base de datos,
+ * manteniendo aislada la lógica SQL del resto del sistema.
+ */
 import Model.Paciente;
 
 import java.sql.Connection;
@@ -11,20 +20,28 @@ import java.util.List;
 
 public class PacienteRepository {
 
-    //variable que guardará la conexion que recibimos del Filtro
+    // Conexión proporcionada por el filtro; permite ejecutar las consultas SQL
     private Connection conn;
 
-    //Constructor, obligamos a quien use esta clase a darnos la conexion
+    /**
+     * Constructor que obliga a quien use este repositorio a proporcionar la conexión.
+     * Esto facilita el manejo transaccional controlado desde el filtro.
+     */
     public PacienteRepository(Connection conn) {
         this.conn = conn;
     }
 
-    //1.Listar todos los pacientes (Para GET)
+    /**
+     * Obtiene todos los pacientes registrados en la base de datos.
+     * Usado en el metodo GET de la API.
+     *
+     * @return Lista completa de pacientes.
+     */
     public List<Paciente> listar() throws SQLException {
         List<Paciente> lista = new ArrayList<>();
         String sql = "SELECT * FROM paciente";
 
-        //try-with-resources: cierra el preparedStatement automaticamente
+        // try-with-resources garantiza cierre automático de PreparedStatement y ResultSet
         try (PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
@@ -35,7 +52,10 @@ public class PacienteRepository {
         return lista;
     }
 
-    //2.Guardar (para POST)
+    /**
+     * Inserta un nuevo paciente en la base de datos.
+     * Parámetros con '?' protegen contra SQL Injection.
+     */
     public void guardar(Paciente p) throws SQLException {
         //consulta sql con signos de interrogacion para evitar sql injection
         String sql = "INSERT INTO paciente (nombre, cedula, correo, edad, direccion, activo) VALUES (?, ?, ?, ?, ?, ?)";
@@ -52,7 +72,10 @@ public class PacienteRepository {
         }
     }
 
-    //3. buscar por id(GET{ID})
+    /**
+     * Busca un paciente por su ID.
+     * Devuelve el objeto si existe o null si no se encontró.
+     */
     public Paciente buscarPorId(int id) throws SQLException {
         String sql = "SELECT * FROM paciente WHERE id = ?";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -65,7 +88,10 @@ public class PacienteRepository {
         }
         return null; //si no existe
     }
-    //4. actualizar (para PUT{ID})
+    /**
+     * Actualiza los datos de un paciente existente.
+     * Si se modifica correctamente, retorna el objeto; caso contrario, null.
+     */
     public Paciente actualizar(Paciente p) throws SQLException {
         String sql = "UPDATE paciente SET nombre=?, cedula=?, correo=?, edad=?, direccion=? WHERE id=?";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -85,7 +111,10 @@ public class PacienteRepository {
             }
         }
     }
-    //5. cambiar estado (PUT desactivar/activar)
+    /**
+     * Cambia el estado del paciente (activo/desactivado).
+     * Utilizado por la API en operaciones PUT específicas.
+     */
     public void actualizarEstado(int id, boolean activo) throws SQLException {
         String sql = "Update paciente SET activo=? WHERE id=?";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -95,7 +124,10 @@ public class PacienteRepository {
         }
     }
 
-    //metodo auxiliar para no repetir codigo al leer del resultset
+    /**
+     * Metodo auxiliar que convierte una fila del ResultSet en un objeto Paciente.
+     * Permite evitar duplicación de código y mantener limpieza en los métodos CRUD.
+     */
     private Paciente mapearPaciente(ResultSet rs) throws SQLException {
         Paciente p = new Paciente();
         p.setId(rs.getInt("id"));

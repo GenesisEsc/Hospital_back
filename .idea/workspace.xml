@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Comentarios en PacienteServiceImpl">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ServiceJdbcException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ServiceJdbcException.java" afterDir="false" />
+    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Comentarios en Conexion">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/HospitalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/HospitalException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761172419787</updated>
-      <workItem from="1765040396043" duration="13277000" />
+      <workItem from="1765040396043" duration="13592000" />
     </task>
     <task id="LOCAL-00001" summary="Division del proyecto por capas y comentarios">
       <option name="closed" value="true" />
@@ -257,7 +257,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765068935859</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Comentarios en ServiceJdbcException">
+      <option name="closed" value="true" />
+      <created>1765069136187</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765069136187</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Comentarios en Conexion">
+      <option name="closed" value="true" />
+      <created>1765069269146</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765069269146</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +288,9 @@
     <MESSAGE value="Comentarios en PacienteRepository" />
     <MESSAGE value="Comentarios en la interfaz PacienteService" />
     <MESSAGE value="Comentarios en PacienteServiceImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en PacienteServiceImpl" />
+    <MESSAGE value="Comentarios en ServiceJdbcException" />
+    <MESSAGE value="Comentarios en Conexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en Conexion" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

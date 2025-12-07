@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Comentarios en el modelo Paciente.java">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/PacienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/PacienteRepository.java" afterDir="false" />
+    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Comentarios en PacienteRepository">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/PacienteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761172419787</updated>
-      <workItem from="1765040396043" duration="12211000" />
+      <workItem from="1765040396043" duration="12633000" />
     </task>
     <task id="LOCAL-00001" summary="Division del proyecto por capas y comentarios">
       <option name="closed" value="true" />
@@ -233,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765067745973</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Comentarios en PacienteRepository">
+      <option name="closed" value="true" />
+      <created>1765068112344</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765068112345</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +253,8 @@
     <MESSAGE value="Comentarios en ConexionFilter" />
     <MESSAGE value="Comentarios en CorsFilter" />
     <MESSAGE value="Comentarios en el modelo Paciente.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en el modelo Paciente.java" />
+    <MESSAGE value="Comentarios en PacienteRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en PacienteRepository" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Division del proyecto por capas y comentarios">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PacienteResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PacienteResource.java" afterDir="false" />
+    <list default="true" id="e312ee05-11dd-40c5-b9cc-0564355976cb" name="Changes" comment="Comentarios en PacienteResource">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Filter/ConexionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Filter/ConexionFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761172419787</updated>
-      <workItem from="1765040396043" duration="11248000" />
+      <workItem from="1765040396043" duration="11580000" />
     </task>
     <task id="LOCAL-00001" summary="Division del proyecto por capas y comentarios">
       <option name="closed" value="true" />
@@ -201,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765066740436</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Comentarios en PacienteResource">
+      <option name="closed" value="true" />
+      <created>1765067120420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765067120420</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +217,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Division del proyecto por capas y comentarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Division del proyecto por capas y comentarios" />
+    <MESSAGE value="Comentarios en PacienteResource" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en PacienteResource" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

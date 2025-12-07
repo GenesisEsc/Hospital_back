@@ -1,4 +1,15 @@
 package Filter;
+/*
+ * Autor: Génesis Escobar
+ * Fecha: 05-12-2025
+ * Versión: 1.0
+ * Descripción:
+ * Filtro encargado de gestionar la conexión JDBC para toda la aplicación.
+ * Intercepta cada solicitud entrante, crea una conexión, la comparte con los
+ * servlets/recursos REST y controla explícitamente las transacciones mediante
+ * commit y rollback. Garantiza integridad de datos y centraliza la apertura
+ * y cierre de conexiones.
+ */
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletResponse;
@@ -9,9 +20,11 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-//implementamos una anotacion. esta anotacion
-// me sirve para poder utilizar la conexion en cualquier parte
-//de mi aplicacion
+/**
+ * Aplica el filtro a todas las rutas del proyecto (/*).
+ * Esto permite que cualquier servlet, JSP o recurso REST
+ * pueda usar la conexión asignada en la solicitud.
+ */
 @WebFilter("/*")
 public class ConexionFilter implements Filter {
     /**
@@ -33,9 +46,10 @@ public class ConexionFilter implements Filter {
          * el siguiente paso la clase filtra o te devuelve el recurso destino
          * que puede ser un servlet o jsp
          */
-        //obtenemos la conexion
+
+        // Abrimos una conexión utilizando la clase utilitaria "Conexion"
         try (Connection connection = Conexion.getConnection()) {
-            //verificamos que la conexion no se realice automaticamente
+            // Asegura que el manejo de transacciones sea manual
             if (connection.getAutoCommit()) {
                 //cambiamos a una conexion manual
                 connection.setAutoCommit(false);
